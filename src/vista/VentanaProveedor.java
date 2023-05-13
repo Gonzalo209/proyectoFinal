@@ -8,7 +8,7 @@ import javax.swing.JButton;
 import java.awt.GridLayout;
 import java.awt.BorderLayout;
 
-public class VentanaCliente extends JInternalFrame {
+public class VentanaProveedor extends JInternalFrame {
 
     private JTextField txfNombre = new JTextField(10);
     private JTextField txfAPaterno = new JTextField(10);
@@ -16,9 +16,9 @@ public class VentanaCliente extends JInternalFrame {
     private JTextField txfDireccion = new JTextField(10);
     private JTextField txfTelefono = new JTextField(10);
 
-    public VentanaCliente() {
+    public VentanaProveedor() {
 
-        super("Registro de cliente", false, true, false, true);
+        super("Registro de proveedores", false, true, false, true);
 
         add(crearPanelPrincipal());
 

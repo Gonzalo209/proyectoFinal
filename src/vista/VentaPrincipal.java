@@ -50,7 +50,19 @@ public class VentaPrincipal extends JFrame {
 
         JMenu menu1 = new JMenu("Menu 1");
 
+        JMenu menu2 = new JMenu("Menu 2");
+
+        JMenu menu3 = new JMenu("Menu 3");
+
+        JMenu menu4 = new JMenu("Menu 4");
+
         JMenuItem opcion11 = new JMenuItem("Clientes");
+
+        JMenuItem opcion12 = new JMenuItem("Compras");
+
+        JMenuItem opcion13 = new JMenuItem("Ventas");
+
+        JMenuItem opcion14 = new JMenuItem("Proveedores");
 
         JMenuItem opcionSalir = new JMenuItem("Salir");
 
@@ -58,11 +70,25 @@ public class VentaPrincipal extends JFrame {
 
         opcionSalir.addActionListener(ManipuladorMenu.getInstancia());
 
+        opcion14.addActionListener(ManipuladorMenu.getInstancia());
+
         menu1.add(opcion11);
+
+        menu2.add(opcion12);
+
+        menu3.add(opcion13);
+
+        menu4.add(opcion14);
 
         menu1.add(opcionSalir);
 
         barraMenu.add(menu1);
+
+        barraMenu.add(menu2);
+
+        barraMenu.add(menu3);
+
+        barraMenu.add(menu4);
 
         return barraMenu;
 

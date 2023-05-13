@@ -1,7 +1,8 @@
 package control;
 
-import vista.MenuCliente;
 import vista.VentaPrincipal;
+import vista.VentanaCliente;
+import vista.VentanaProveedor;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -31,15 +32,24 @@ public class ManipuladorMenu implements ActionListener {
 
         String menu = evento.getActionCommand();
 
-        MenuCliente menuCliente = new MenuCliente();
+        VentanaCliente ventanaCliente = new VentanaCliente();
+        VentanaProveedor ventanaProveedor = new VentanaProveedor();
 
         switch (menu) {
 
             case "Clientes" -> {
 
-                menuCliente.setVisible(true);
+                ventanaCliente.setVisible(true);
 
-                ventaPrincipal.getEscritorio().add(menuCliente);
+                ventaPrincipal.getEscritorio().add(ventanaCliente);
+
+            }
+
+            case "Proveedores" -> {
+
+                ventanaProveedor.setVisible(true);
+
+                ventaPrincipal.getEscritorio().add(ventanaProveedor);
 
             }
 
