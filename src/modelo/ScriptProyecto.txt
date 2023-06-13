@@ -1,0 +1,39 @@
+DROP DATABASE proyecto;
+CREATE DATABASE proyecto;
+USE clientesDB;
+
+CERATE TABLE cliente(
+	idCliente INT auto_increment PRIMARY KEY,
+	nombre VARCHAR(15),
+	apellidoPaterno VARCHAR(15),
+	apellidoMaterno VARCHAR(15),
+	direccion VARCHAR(15),
+	telefono VARCHAR(15)
+};
+
+CREATE TABLE producto(
+	idProducto INT auto_increment PRIMARY KEY,
+	nombreProducto VARCHAR(35),
+	precio NUMERIC(9,2),
+	categoria CHAR(1),
+	existencia INT
+);
+	
+
+CREATE TABLE venta(
+	idVenta INT auto_increment PRIMARY KEY,
+	total NUMERIC(9,2),
+	fecha DATE,
+	cliente VARCHAR(30),
+	producto VARCHAR(30),
+);
+
+CREATE TABLE pedido(
+	id INT PRIMARY KEY references cliente (idCliente),
+	monto NUMERIC(9,2),
+	fechaPedido DATE,
+	fechaEntrega DATE,
+	producto REFERENCES producto(idProducto),
+	cantidad NUMERIC(3,0)
+);
+
