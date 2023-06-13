@@ -60,7 +60,7 @@ public class Producto {
 
     }
 
-    public String getPrecio() {
+    public float getPrecio() {
 
         return precio;
 
@@ -72,7 +72,7 @@ public class Producto {
 
     }
 
-    public String getExistencia() {
+    public int getExistencia() {
 
         return existencia;
 
